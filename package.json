@@ -13,10 +13,6 @@
     "express": "*",
     "routes": "*",
     "ejs": "*",
-    "xmldom": "*",
-    "body-parser": "*",
-    "path": "*",
-    "fs": "*",
-    "xml2js":"*"
+    "path": "*"
   }
 }
