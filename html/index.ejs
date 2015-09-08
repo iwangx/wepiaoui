@@ -6,43 +6,53 @@
     <meta name="author" content="wangxing">
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
-    <meta name="copyright" content="Copyright (c) 1998-2014 81tai">
     <meta name="format-detection" content="telephone=no">
-    <title>标题1</title>
-    <link rel="stylesheet" href="/css/index.css"/>
+    <title>wepiaoui</title>
+    <link rel="stylesheet" href="/css/reset.css"/>
+    <link rel="stylesheet" href="/css/doc.css"/>
+    <link rel="stylesheet" href="/css/highlight/github.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
 </head>
 <body>
-
-    <ul id="list" class="list">
-
-    </ul>
-    <div id="hidden" class="hidden">;&nbsp</div>
-
-    <div id="bottom" class="bottom">
-        <div class="box">
-            <div>
-                发给哪个：
-            </div>
-            <input id="sender" type="text" />
-        </div>
-        <div class="bottom_box">
-            <iframe id="iframe"></iframe>
-            <button id="face" class="face"><i class="iconfont">&#xe64a;</i></button>
-            <button id="send">发送</button>
-        </div>
-        <div id="expression" class="expression hide">
-            <div class="swiper-container">
-                <div id="wrapper" class="swiper-wrapper">
-
+    <div class="content clearfix">
+        <div class="fl content-left">
+            <div class="code-block">
+                <h1>基本样式</h1>
+                <h2>按钮</h2>
+                <p>绿色实体按钮</p>
+                <div class="demo">
+                    <div class="demo-content">
+                        <button type="button" class="button button-green">绿色按钮</button>
+                    </div>
+                    <div class="demo-code">
+                        <pre class="javascript">
+                            <code>
+                                var s="123";
+                                var s="123";
+                                var s="123";
+                                var s="123";
+                                var s="123";
+                                var s="123";
+                            </code>
+                        </pre>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+
+
+        </div>
+        <div class="fl content-right">
+
         </div>
     </div>
-    <script id="adjust" src="/js/adjust.js"></script>
-    <script src="/js/zepto.min.js"></script>
-    <script src="/js/socket.io.js"></script>
-    <script src="/js/swiper.min.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/js/lib/jquery-1.11.3.min.js"></script>
+    <script src="/js/lib/highlight.pack.js"></script>
+    <script>
+        (function(){
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        })();
+    </script>
 </body>
 </html>
