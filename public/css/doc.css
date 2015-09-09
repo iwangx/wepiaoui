@@ -2,6 +2,10 @@
 .content{width: 1024px;margin: 0 auto;}
 .content-left{width: 850px}
 .content-right{width: 174px}
+.list{position: fixed;padding:10px 0 0 10px;}
+.list li{padding: 5px 0}
+.list a{color: #27affa}
+.list a:hover,.list a:active{color: #27affa}
 h1, h2, h3, h4, h5, h6{font-weight: 400}
 h1{font-size: 28px;margin: 20px 0 10px 0;}
 h2{font-size: 24px;margin: 20px 0 10px 0;}

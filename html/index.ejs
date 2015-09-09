@@ -21,6 +21,7 @@
                 <h1>基本样式</h1>
                 <!--按钮样式-->
                 <div>
+                    <a class="anchor"></a>
                     <h2>按钮</h2>
                     <p>绿色实体按钮</p>
                     <div class="demo">
@@ -47,6 +48,7 @@
                 </div>
                 <!--input样式-->
                 <div>
+                    <a class="anchor"></a>
                     <h2>文本框</h2>
                     <p>断的文本框</p>
                     <div class="demo">
@@ -73,6 +75,7 @@
                 </div>
                 <!--下拉框-->
                 <div>
+                    <a class="anchor"></a>
                     <h2>下拉框</h2>
                     <div class="demo">
                         <div class="demo-content">
@@ -93,6 +96,7 @@
                 <h1>组合样式</h1>
                 <!--面包屑-->
                 <div>
+                    <a class="anchor"></a>
                     <h2>面包屑</h2>
                     <div class="demo">
                         <div class="demo-content">
@@ -116,6 +120,7 @@
 
                 <!--表格-->
                 <div>
+                    <a class="anchor"></a>
                     <h2>表格</h2>
                     <p>什么都不带的表格</p>
                     <div class="demo">
@@ -261,7 +266,9 @@
             </div>
         </div>
         <div class="fl content-right">
+            <ul class="list" id="menuList">
 
+            </ul>
         </div>
     </div>
     <script src="js/lib/jquery-1.11.3.min.js"></script>
@@ -269,9 +276,23 @@
     <script src="js/lib/syntaxhighlighter/shBrushJScript.js"></script>
     <script src="js/lib/syntaxhighlighter/shBrushXml.js"></script>
     <script src="js/lib/syntaxhighlighter/shBrushCss.js"></script>
+    <script src="js/lib/GUID.js"></script>
     <script type="text/javascript">
         SyntaxHighlighter.config.clipboardSwf = 'js/lib/syntaxhighlighter/clipboard.swf';
         SyntaxHighlighter.all();
+    </script>
+
+    <script>
+        (function(){
+            var menuList=$("#menuList");
+            var itemList=[];
+            $("h2").each(function(){
+                var guid=Guid.NewGuid().ToString("N");
+                this.previousElementSibling.setAttribute("name",guid);
+                itemList.push("<li><a href='#"+guid+"'>"+this.innerHTML+"</a></li>");
+            });
+            menuList.append(itemList.join(""));
+        })();
     </script>
 </body>
 </html>
