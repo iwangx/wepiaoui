@@ -75,12 +75,12 @@ input[type="text"]:focus {
     outline: none;
     border: 1px solid #24cf5f;
 }
-
 .input, .select {
     display: block;
     border-radius: 3px;
     border: 1px solid #999;
     padding: 0 10px;
+    height: 30px;
 }
 
 .date-input {
@@ -133,9 +133,13 @@ input[type="text"]:focus {
     font-size: 12px;
 }
 
+.tb td{
+    vertical-align: middle;
+    text-align: center;
+}
+
 .tb-head td{
     height: 30px;
-    text-align: center;
     color: #999;
     border-bottom: 2px solid #24cf5f;
 }

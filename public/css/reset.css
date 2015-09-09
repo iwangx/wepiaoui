@@ -30,3 +30,4 @@ input, textarea {
   margin: 0;
   padding: 0
 }
+table{border-spacing: 0;border-collapse: collapse; }
