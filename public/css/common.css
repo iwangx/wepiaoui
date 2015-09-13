@@ -2,10 +2,13 @@
     公告控件文件，可以添加，修改请慎重
 */
 
-ol, li {
+ol, ul {
     list-style: none;
-    margin: 0
+    margin: 0;
+    padding: 0;
 }
+
+p{margin: 0;}
 
 .fl {
     float: left
@@ -15,16 +18,11 @@ ol, li {
     float: right
 }
 
+.text-center{text-align: center;}
 .ui-hide{display: none}
-.clearfix:after,.clearfix:before{
-    content: " ";
-    display: table;
-}
-.clearfix:after{
-    clear: both;
-}
 
 /******************************** button ********************************/
+button,
 .button {
     display: block;
     text-align: center;
@@ -32,6 +30,7 @@ ol, li {
     padding: 0
 }
 
+button,
 .button:focus,
 .button:active {
     outline: none
@@ -39,30 +38,43 @@ ol, li {
 
 /*实体绿色按钮*/
 .button-green {
-    height: 30px;
     line-height: 30px;
-    width: 100px;
     background: #24cf5f;
-    border-radius: 5px;
-    font-size: 12px;
     color: #fff;
 }
 
 /*空心绿色按钮*/
 .button-green-hollow {
-    height: 30px;
     line-height: 28px;
-    width: 100px;
     background: #fff;
-    border-radius: 5px;
-    font-size: 12px;
     border: 1px solid #24cf5f;
     color: #24cf5f
 }
-
+/*空心灰色按钮*/
+.button-gray-hollow{
+    line-height: 28px;
+    background: #fff;
+    border: 1px solid #999;
+    color: #999
+}
+.button-gray-hollow,
+.button-green-hollow,
+.button-green{
+    height: 30px;
+    min-width: 100px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0 10px;
+}
 .button-green-hollow:active,
 .button-green-hollow:hover {
-    background: #24cf5f;
+    background: #24cf5f !important;
+    color: #fff;
+    text-decoration: none;
+}
+.button-gray-hollow:hover,
+.button-green-hollow:active{
+    background: #999;
     color: #fff;
 }
 
@@ -75,6 +87,7 @@ input[type="text"]:focus {
     outline: none;
     border: 1px solid #24cf5f;
 }
+
 .input, .select {
     display: block;
     border-radius: 3px;
@@ -87,6 +100,7 @@ input[type="text"]:focus {
     background: url(../img/common/icon-date.png) 95px center no-repeat;
     width: 120px;
 }
+.textarea{padding: 10px;width: 360px;height: 100px; border-radius: 3px;resize: none}
 
 /******************************** input end ********************************/
 
@@ -100,7 +114,7 @@ input[type="text"]:focus {
 
 /******************************** radio ********************************/
 .radio + .radio {
-    margin: 0
+    margin: 0 20px 0 0;
 }
 
 .radio {
@@ -133,13 +147,11 @@ input[type="text"]:focus {
     font-size: 12px;
 }
 
-.tb td{
-    vertical-align: middle;
-    text-align: center;
-}
-
-.tb-head td{
+.tb-head td,
+.tb-head th
+{
     height: 30px;
+    text-align: center;
     color: #999;
     border-bottom: 2px solid #24cf5f;
 }
@@ -251,11 +263,15 @@ input[type="text"]:focus {
     width: 173px
 }
 
+.search-type{margin-top: 15px;}
+.export{padding: 42px 0 38px 26px;}
+.tb-body{text-align: center}
+
 /******************************** 查询条件选择 end ********************************/
 
 
 /******************************** 分页 ********************************/
-.pagination{padding: 14px 0;margin:0 0 0 auto;display: block }
+.pagination{padding: 14px 0;margin:0 0 0 auto;display: block ;overflow: hidden}
 .yiiPager{float: right;overflow: hidden}
 .page,.next,.previous,.prev,.last{padding-left: 5px;float: left;}
 .page a,.next a,.previous a,.prev a,.last a{padding: 0 10px;text-align: center;border: 1px solid #ccc;border-radius: 3px;color: #ccc;cursor: pointer;line-height: 30px;display: block}
@@ -265,4 +281,49 @@ input[type="text"]:focus {
 
 /******************************** 颜色 ********************************/
 .color-gray{color: #999}
+.color-green{color: #44cb83;}
 /******************************** 颜色 end ********************************/
+
+/******************************** 地区选择 ********************************/
+select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 10px;width: 170px;}
+/******************************** 地区选择 结束********************************/
+
+/******************************** 列表上方菜单栏 ********************************/
+.ui-checkbox,.ui-radio{padding-left:20px;font-size: 14px;font-weight: 400;margin: 0;line-height: 30px;height: 30px;cursor: pointer}
+/*.ui-checkbox input[type="checkbox"]{float: left;margin:8px 0 0 -20px;height: 14px;width: 14px;background: #fff;border: 1px solid #D7D3D3;}*/
+/*.ui-checkbox input[type="checkbox"]:checked{background: #fff;}*/
+.ui-action-menu{padding: 30px 0}
+.ui-action-menu .ui-checkbox{margin-right: 46px}
+.ui-action-menu .button{margin-right: 18px}
+
+.ui-search{position: relative;}
+.ui-search .input{padding-right: 36px;}
+.button-search{height: 30px;width: 36px;background: transparent;position: absolute;right: 0;top:0;background: url(../img/common/seek.png) center no-repeat;}
+/******************************** 列表上方菜单栏 结束 ********************************/
+
+/******文本框******/
+.input.big{padding: 14px 20px;}
+.select.big,.input.big{height: 50px;width: 360px;}
+.textarea.big{height: 244px;width: 800px}
+/*********checkbox*********/
+.ui-checkbox,.ui-radio{display: inline-block;}
+.ui-checkbox input[type="checkbox"],.ui-radio input[type="radio"]{display: none;}
+.ui-checkbox input[type="checkbox"]:checked+.ui-checkbox-icon{background: url(../img/common/icon-checkbox.png) no-repeat;border: 0}
+.ui-checkbox-icon,.ui-radio-icon{float: left;margin:7px 0 0 -20px;height: 16px;width: 16px;background: #fff;border: 1px solid #D7D3D3;}
+.ui-checkbox-group .ui-checkbox,.ui-radio-group .ui-radio{margin-right: 20px;}
+.ui-checkbox-group .ui-checkbox,.ui-radio-group .ui-radio{line-height: 16px;height: 16px;}
+.ui-checkbox-group .ui-checkbox-icon,.ui-radio-group .ui-radio-icon{margin: 0 0 0 -20px;}
+
+.ui-radio-icon{border: 1px solid #ccc;border-radius: 50%;padding:4px; }
+.ui-radio input[type="radio"]:checked+.ui-radio-icon:after{content: "";display: block;height: 6px;width: 6px;background: #44cb83;border-radius: 50%;}
+/**************表单************/
+.ui-form{}
+.ui-form-group{margin-bottom: 20px;position: relative;padding-left: 20px;}
+.ui-form-group>label{display: inline-block;margin-bottom: 6px;color: #44cb83;font-size: 12px;line-height: 12px;}
+.ui-form-required{position: relative}
+.ui-form-required:before{content: "*";position: absolute;color: #e00000;height: 4px;line-height: 4px;top: 50%;margin-top: -2px;left: -20px;}
+/**********上传图片***********/
+.ui-image-upload{position: relative;min-height: 60px;min-width: 60px;background: url(../img/common/icon-add.png) center no-repeat}
+.ui-image-upload-img{display: block;height: 100%;width: 100%;}
+.ui-image-upload-file{position: absolute;left: 0;top: 0;width: 100%;height: 100%;opacity: 0;cursor: pointer}
+.ui-image-upload-tip{position: absolute;height:14px;line-height: 14px;padding-left: 10px;top: 50%;margin-top: -7px;font-size: 12px;left: 60px;width: 100%;}
