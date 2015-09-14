@@ -335,3 +335,7 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 .tb-body-action:hover,
 .tb-body-action:active,
 .tb-body-action:focus{font-size: 12px;color: #27affa;outline: none}
+/************************验证**********************/
+.error-warning,
+.ui-form-group .error-warning{position: absolute;margin-top: 5px;font-size: 14px;color: #ff9e00}
+.error-warning-border{border-color: #ff9e00}

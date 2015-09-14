@@ -354,6 +354,44 @@
                     </div>
                 </div>
 
+                <!--表格上方查询-->
+                <div>
+                    <a class="anchor"></a>
+                    <h2>表格上方查询</h2>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <div class="ui-action-menu clearfix">
+                                <div class="ui-search clearfix fr">
+                                    <input class="input" type="text">
+                                    <button class="button-search"></button>
+                                </div>
+                                <label class="ui-checkbox clearfix fl">
+                                    <input type="checkbox">
+                                    <i class="ui-checkbox-icon"></i>
+                                    全选
+                                </label>
+                                <button type="button" class="button button-green-hollow">添加</button>
+                            </div>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:html">
+                                <div class="ui-action-menu clearfix">
+                                    <div class="ui-search clearfix fr">
+                                        <input class="input" type="text">
+                                        <button class="button-search"></button>
+                                    </div>
+                                    <label class="ui-checkbox clearfix fl">
+                                        <input type="checkbox">
+                                        <i class="ui-checkbox-icon"></i>
+                                        全选
+                                    </label>
+                                    <button type="button" class="button button-green-hollow">添加</button>
+                                </div>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
                 <!--表格-->
                 <div>
                     <a class="anchor"></a>
@@ -710,116 +748,79 @@
                 </div>
 
                 <!--表单验证-->
-                <!--<div>
+                <div>
                     <h2>表单验证</h2>
-                    <p>规则的表单验证</p>
+                    <p></p>
                     <div class="demo">
                         <div class="demo-content">
-                            <form class="ui-form">
+                            <form id="form" class="ui-form">
                                 <div class="ui-form-group">
                                     <label>必填项验证</label>
-                                    <input type="text" class="input big">
+                                    <input type="text" name="txt_name" class="input big">
                                 </div>
                                 <div class="ui-form-group">
-                                    <label>下拉的演示</label>
-                                    <select class="select big">
-                                        <option>下拉的演示</option>
-                                        <option>下拉的演示</option>
-                                        <option>下拉的演示</option>
-                                    </select>
+                                    <label>邮箱验证</label>
+                                    <input type="text" name="txt_email" class="input big">
                                 </div>
                                 <div class="ui-form-group">
-                                    <label>checkbox的演示</label>
-                                    <div class="ui-checkbox-group">
-                                        <label class="ui-checkbox clearfix">
-                                            <input name="" type="checkbox">
-                                            <i class="ui-checkbox-icon"></i>
-                                            这里是checkbox
-                                        </label>
-                                        <label class="ui-checkbox clearfix">
-                                            <input name="" type="checkbox">
-                                            <i class="ui-checkbox-icon"></i>
-                                            这里是checkbox
-                                        </label>
-                                        <label class="ui-checkbox clearfix">
-                                            <input name="" type="checkbox">
-                                            <i class="ui-checkbox-icon"></i>
-                                            这里是checkbox
-                                        </label>
-                                    </div>
+                                    <label>数字范围验证</label>
+                                    <input type="text" name="txt_number" class="input big">
                                 </div>
                                 <div class="ui-form-group">
-                                    <label>radio的演示</label>
-                                    <div class="ui-radio-group">
-                                        <label class="ui-radio clearfix">
-                                            <input name="form-radio" type="radio">
-                                            <i class="ui-radio-icon"></i>
-                                            这里是radio
-                                        </label>
-                                        <label class="ui-radio clearfix">
-                                            <input name="form-radio" type="radio">
-                                            <i class="ui-radio-icon"></i>
-                                            这里是radio
-                                        </label>
-                                        <label class="ui-radio clearfix">
-                                            <input  name="form-radio" type="radio">
-                                            <i class="ui-radio-icon"></i>
-                                            这里是radio
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="ui-form-group">
-                                    <label>需要验证必填的项目</label>
-                                    <div class="ui-form-required">
-                                        <select class="select big">
-                                            <option>下拉的演示</option>
-                                            <option>下拉的演示</option>
-                                            <option>下拉的演示</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="ui-form-group">
-                                    <label>需要验证必填的radio</label>
-                                    <div class="ui-form-required">
-                                        <div class="ui-radio-group">
-                                            <label class="ui-radio clearfix">
-                                                <input name="form-radio" type="radio">
-                                                <i class="ui-radio-icon"></i>
-                                                这里是radio
-                                            </label>
-                                            <label class="ui-radio clearfix">
-                                                <input name="form-radio" type="radio">
-                                                <i class="ui-radio-icon"></i>
-                                                这里是radio
-                                            </label>
-                                            <label class="ui-radio clearfix">
-                                                <input  name="form-radio" type="radio">
-                                                <i class="ui-radio-icon"></i>
-                                                这里是radio
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ui-form-group">
-                                    <label>文本域的演示</label>
-                                    <div class="ui-form-required">
-                                        <textarea class="textarea"></textarea>
-                                    </div>
-                                </div>
-                                <div class="ui-form-group">
-                                    <label>超大的文本域的演示</label>
-                                    <div class="ui-form-required">
-                                        <textarea class="textarea big"></textarea>
-                                    </div>
+                                    <label>自定义验证</label>
+                                    <input type="text" name="txt_define" class="input big">
                                 </div>
                             </form>
                         </div>
                         <div class="demo-code">
                                 <pre class="brush:html">
+                                    <form id="form" class="ui-form">
+                                        <div class="ui-form-group">
+                                            <label>必填项验证</label>
+                                            <input type="text" name="txt_name" class="input big">
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>邮箱验证</label>
+                                            <input type="text" name="txt_email" class="input big">
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>数字范围验证</label>
+                                            <input type="text" name="txt_number" class="input big">
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>自定义验证</label>
+                                            <input type="text" name="txt_define" class="input big">
+                                        </div>
+                                    </form>
                                 </pre>
+                            <pre class="brush:js">
+                                //自定义验证方法
+                                $.validator.addMethod("txt_define", function(value, element, params) {
+                                    return   (new RegExp("123")).test(value);
+                                }, $.validator.format("请输入123才能验证通过"));
+                                new ValidatePlugin('#form',{
+                                    rules:{
+                                        "txt_name":{//对应name="txt_name"的元素
+                                            required: true
+                                        },
+                                        "txt_email":{//对应name="txt_email"的元素
+                                            required: true,
+                                            email:true
+                                        },
+                                        "txt_number":{//对应name="txt_number"的元素
+                                            required: true,
+                                            max:10,
+                                            min:0
+                                        },
+                                        "txt_define":{//对应name="txt_number"的元素
+                                            "txt_define":true
+                                        }
+                                    }
+                                });
+                            </pre>
                         </div>
                     </div>
-                </div>-->
+                </div>
 
                 <!--弹出框-->
                 <div>
@@ -840,7 +841,7 @@
                     <p>重写confirm，重写的window下的confirm方法</p>
                     <div class="demo">
                         <div class="demo-content">
-                            <button type="button" onclick="confirm('123')">点击打开confirm</button>
+                            <button type="button" onclick="confirm('123',function(){},function(){})">点击打开confirm</button>
                         </div>
                         <div class="demo-code">
                             <pre class="brush:js">
@@ -904,8 +905,8 @@
             </ul>
         </div>
     </div>
+    <script src="js/lib/sea.js"></script>
     <script src="js/lib/jquery-1.11.3.min.js"></script>
-    <script src="js/lib/artdialog/dialog.js"></script>
 
     <script src="js/lib/syntaxhighlighter/shCore.js"></script>
     <script src="js/lib/syntaxhighlighter/shBrushJScript.js"></script>
@@ -917,36 +918,6 @@
         SyntaxHighlighter.all();
     </script>
 
-    <script>
-        (function(){
-            var menuList=$("#menuList");
-            var itemList=[];
-            var dia=document.getElementById("diaBtn");
-            $("h2").each(function(){
-                var $this=$(this);
-
-                var guid=Guid.NewGuid().ToString("N");
-                $this.before("<a class='anchor' name='"+guid+"'></a>")
-                //this.previousElementSibling.setAttribute("name",guid);
-                itemList.push("<li><a href='#"+guid+"'>"+this.innerHTML+"</a></li>");
-            });
-            menuList.append(itemList.join(""));
-
-            var d= dialog({
-                id:"",//指定在dialog内部建立id，可以通过dialog.get(id)方式获取弹出框
-                width:100,//指定弹出框的宽度
-                title:"这里是标题",//指定弹出框标题
-                content:document.getElementById("dia"),//指定需要显示的内容，可以是语原生的dom对象，也可以是html字符串
-                ok:function(){d.close()},//指定出现确定按钮并且为确定按钮绑定事件,如果不需要执行方法直接赋值为true即可,默认是点击后会马上关闭弹出框,可以通过return false阻止弹出框关闭
-                cancel:function(){}//指定出现取消按钮并且为取消按钮绑定事件,如果不需要执行方法直接赋值为true即可,可以通过return false阻止弹出框关闭
-            })//*指定显示出弹出框67
-
-            dia.addEventListener("click",function(){
-                d.showModal();
-            });
-        })();
-    </script>
-
-    <script src="js/common.js"></script>
+    <script src="js/config.js"></script>
 </body>
 </html>
