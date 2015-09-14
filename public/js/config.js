@@ -8,7 +8,8 @@ seajs.config({
     alias: {
         'common':'common',
         'main':'main',
-        'dialog':"lib/artdialog/dialog"
+        'dialog':"lib/artdialog/dialog",
+        'laydate':'lib/laydate/laydate'
     },
     base: "./js/",
     charset: 'utf-8'

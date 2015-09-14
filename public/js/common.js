@@ -4,6 +4,48 @@
 (function(fn) {
     typeof define === "function" ? define("common", fn) : fn()
 })(function(require, exports, module){
+    /**************** 时间选择 ******************/
+    require("laydate");
+    var start = {
+        elem: '#start',
+        format: 'YYYY-MM-DD',
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#end',
+        format: 'YYYY-MM-DD',
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+
+    //class名为date-input-date的input框在点击的时候都会触发文本框
+    $(".date-input-date").on("click",function(){
+        laydate({
+            format: 'YYYY-MM-DD',
+            istoday: false
+        })
+    });
+    $(".date-input-datetime").on("click",function(){
+        laydate({
+            format: 'YYYY-MM-DD hh:mm:ss',
+            istoday: false,
+            istime: true
+        })
+    });
+
+    $("#start").on("click",function(){
+        laydate(start);
+    });
+    $("#end").on("click",function(){
+        laydate(end);
+    });
+    /**************** 时间选择结束 ******************/
     /**************** 重写弹出框 ******************/
     window.confirm=function(msg,okCallBack,cancelCallBack){
         dialog({

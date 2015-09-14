@@ -51,14 +51,14 @@
                 <div>
                     <a class="anchor"></a>
                     <h2>链接</h2>
-                    <p>绿色链接</p>
+                    <p>蓝色链接</p>
                     <div class="demo">
                         <div class="demo-content">
-                            <a href="javascript:;" class="link-blue">绿色链接</a>
+                            <a href="javascript:;" class="link-blue">蓝色链接</a>
                         </div>
                         <div class="demo-code">
                         <pre class="brush:html">
-                               <a href="javascript:;" class="link-blue">绿色链接</a>
+                               <a href="javascript:;" class="link-blue">蓝色链接</a>
                         </pre>
                         </div>
                     </div>
@@ -99,6 +99,51 @@
                             <pre class="brush:html">
                                    <input type="text" class="input big">
                             </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!--时间选择 -->
+                <div>
+                    <h2>时间选择</h2>
+                    <p>时间选择采用开源免费，轻量的laydate，<a class="color-gray" target="_blank" href="http://sentsin.com/layui/laydate/">查看api</a></p>
+                    <p>只要在input中加入类名date-input-date就能打开时间选择，选择日期</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <input type="text" class="input date-input date-input-date">
+                        </div>
+                        <div class="demo-code">
+                        <pre class="brush:html">
+                            <input type="text" class="input date-input date-input-date">
+                        </pre>
+                        </div>
+                    </div>
+                    <p>只要在input中加入类名date-input-datetime就能打开时间选择，选择时分秒</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <input type="text" class="input date-input date-input-datetime">
+                        </div>
+                        <div class="demo-code">
+                        <pre class="brush:html">
+                            <input type="text" class="input date-input date-input-datetime">
+                        </pre>
+                        </div>
+                    </div>
+                    <p>在有限制日期中间取值的情况下，有开始日期和结束日期的情况下只要在开始时间的input上加上id="start"结束时间加上id="end"，就可以做限制，
+                        如果单个页面上有多个这样的情况的时候需要自己写js。</p>
+                    <div class="demo">
+                        <div class="demo-content ">
+                            <div class="clearfix">
+                                <input type="text" id="start" class="input date-input fl">
+                                <p class="fl">&#12288;</p>
+                                <input type="text" id="end" class="input date-input fl">
+                            </div>
+                        </div>
+                        <div class="demo-code">
+                        <pre class="brush:html">
+                            <input type="text" id="start " class="input date-input">
+                            <input type="text" id="end " class="input date-input">
+                        </pre>
                         </div>
                     </div>
                 </div>
