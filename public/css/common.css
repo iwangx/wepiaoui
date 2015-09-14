@@ -338,4 +338,4 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 /************************验证**********************/
 .error-warning,
 .ui-form-group .error-warning{position: absolute;margin-top: 5px;font-size: 14px;color: #ff9e00}
-.error-warning-border{border-color: #ff9e00}
+.error-warning-border,.input.error-warning-border:focus{border-color: #ff9e00}
