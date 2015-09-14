@@ -21,6 +21,8 @@ p{margin: 0;}
 .text-center{text-align: center;}
 .ui-hide{display: none}
 
+.right-content {  padding: 0 30px;  }
+
 /******************************** button ********************************/
 button,
 .button {
@@ -78,7 +80,6 @@ button,
     color: #fff;
 }
 
-/******************************** button end ********************************/
 
 /******************************** input ********************************/
 textarea:focus,
@@ -102,15 +103,12 @@ input[type="text"]:focus {
 }
 .textarea{padding: 10px;width: 360px;height: 100px; border-radius: 3px;resize: none}
 
-/******************************** input end ********************************/
-
 /******************************** select ********************************/
 .select {
     padding: 0;
     background: #fff;
 }
 
-/******************************** select end ********************************/
 
 /******************************** radio ********************************/
 .radio + .radio {
@@ -139,8 +137,6 @@ input[type="text"]:focus {
     background-position: 0 0;
 }
 
-/******************************** radio end ********************************/
-
 /******************************** table ********************************/
 .tb {
     width: 100%;
@@ -165,7 +161,6 @@ input[type="text"]:focus {
 .tb-body tr:nth-of-type(even){background: #fff;}
 
 .tb-body-text{overflow: hidden;margin: 0;line-height: 13px;height: 13px;text-overflow: ellipsis;}
-/******************************** table end ********************************/
 
 /******************************** 面包屑 ********************************/
 .ui-breadcrumb {
@@ -199,11 +194,7 @@ input[type="text"]:focus {
     line-height: 15px;
 }
 
-/******************************** 面包屑 end ********************************/
 
-.right-content {
-    padding: 0 30px;
-}
 
 /******************************** 查询条件选择 ********************************/
 .form-search {
@@ -266,8 +257,6 @@ input[type="text"]:focus {
 .export{padding: 42px 0 38px 26px;}
 .tb-body{text-align: center}
 .tb-body-action{margin:0 10px; }
-/******************************** 查询条件选择 end ********************************/
-
 
 /******************************** 分页 ********************************/
 .pagination{padding: 14px 0;margin:0 0 0 auto;display: block ;overflow: hidden}
@@ -276,16 +265,13 @@ input[type="text"]:focus {
 .page a,.next a,.previous a,.prev a,.last a{padding: 0 10px;text-align: center;border: 1px solid #ccc;border-radius: 3px;color: #ccc;cursor: pointer;line-height: 30px;display: block}
 .page a,.next a,.previous a,.prev a,.last a{color: #ccc;}
 .pagination .selected a,.page a:hover,.next a:hover,.previous a:hover,.prev a:hover,.last a:hover{color: #44cb83;border-color: #44cb83;}
-/******************************** 分页 end ********************************/
 
 /******************************** 颜色 ********************************/
 .color-gray{color: #999}
 .color-green{color: #44cb83;}
-/******************************** 颜色 end ********************************/
 
 /******************************** 地区选择 ********************************/
 select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 10px;width: 170px;}
-/******************************** 地区选择 结束********************************/
 
 /******************************** 列表上方菜单栏 ********************************/
 .ui-checkbox,.ui-radio{padding-left:20px;font-size: 14px;font-weight: 400;margin: 0;line-height: 30px;height: 30px;cursor: pointer}
@@ -298,7 +284,6 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 .ui-search{position: relative;}
 .ui-search .input{padding-right: 36px;}
 .button-search{height: 30px;width: 36px;background: transparent;position: absolute;right: 0;top:0;background: url(../img/common/seek.png) center no-repeat;}
-/******************************** 列表上方菜单栏 结束 ********************************/
 
 /******文本框******/
 .input.big{padding: 14px 20px;}
@@ -339,3 +324,8 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 .error-warning,
 .ui-form-group .error-warning{position: absolute;margin-top: 5px;font-size: 14px;color: #ff9e00}
 .error-warning-border,.input.error-warning-border:focus{border-color: #ff9e00}
+/*********************** tab **********************/
+.ui-tab{border-bottom: 1px solid #ccc;}
+.ui-tab a{float: left;padding: 0 25px;font-size: 14px;color: #999;height: 30px;line-height: 30px;text-decoration: none}
+.ui-tab a:hover,.ui-tab a:active,.ui-tab a:visited{color: #999;}
+.ui-tab a.active{color: #fff;background: #44cb83}
