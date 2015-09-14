@@ -1,6 +1,66 @@
 /**
  * Created by wangxing on 2015/9/11.
  */
+
+/**************** 重写弹出框 ******************/
+window.confirm=function(msg,okCallBack,cancelCallBack){
+    dialog({
+        content:msg,
+        title:"提示",
+        cancelDisplay:false,
+        ok:function(){
+            if(okCallBack){
+                okCallBack.call(this);
+            }
+        },
+        cancel:function(){
+            if(cancelCallBack){
+                cancelCallBack.call(this);
+            }
+        }
+    }).showModal();
+}
+
+window.alert=function(msg,okCallBack){
+    dialog({
+        content:"<p class='ui-alert'>"+msg+"</p>",
+        title:"提示",
+        cancelDisplay:false,
+        ok:function(){
+            if(okCallBack){
+                okCallBack.call(this);
+            }
+        },
+        cancel:false
+    }).showModal();
+}
+
+window.tip=function(msg){
+    var tip = dialog({
+        content: msg,
+        cancelDisplay:false,
+        padding:20
+    }).show();
+    setTimeout(function(){
+        tip.close().remove();
+    },2000);
+}
+
+window.loading=function(){
+    if(window.loadingEle){
+        window.loadingEle.close().remove();
+    }
+    window.loadingEle = dialog({
+        cancelDisplay:false,
+        padding:"10px 20px"
+    }).show();
+}
+
+window.loadingClose=function(){
+    if(window.loadingEle){
+        window.loadingEle.close().remove();
+    }
+};
 (function(){
     $.fn.imageUpload=function(){
 

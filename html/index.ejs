@@ -8,6 +8,7 @@
     <meta name="x5-orientation" content="portrait">
     <meta name="format-detection" content="telephone=no">
     <title>wepiaoui</title>
+    <link rel="stylesheet" href="/css/lib/ui-dialog.css"/>
     <link rel="stylesheet" href="/css/reset.css"/>
     <link rel="stylesheet" href="/css/syntaxhighlighter/shCore.css"/>
     <link rel="stylesheet" href="/css/syntaxhighlighter/shThemeEclipse.css"/>
@@ -53,25 +54,15 @@
                     <p>绿色链接</p>
                     <div class="demo">
                         <div class="demo-content">
-                            <a href="javascript:;" class="">绿色按钮</a>
+                            <a href="javascript:;" class="link-blue">绿色链接</a>
                         </div>
                         <div class="demo-code">
                         <pre class="brush:html">
-                               <button type="button" class="button button-green">绿色按钮</button>
+                               <a href="javascript:;" class="link-blue">绿色链接</a>
                         </pre>
                         </div>
                     </div>
-                    <p>绿色空心按钮</p>
-                    <div class="demo">
-                        <div class="demo-content">
-                            <button type="button" class="button button-green-hollow">绿色按钮</button>
-                        </div>
-                        <div class="demo-code">
-                        <pre class="brush:html">
-                               <button type="button" class="button button-green-hollow">绿色按钮</button>
-                        </pre>
-                        </div>
-                    </div>
+
                 </div>
                 <!--input样式-->
                 <div>
@@ -509,76 +500,46 @@
                 </div>
 
                 <!--表单-->
-                <h2>表单</h2>
-                <p>什么都不带的表单</p>
-                <div class="demo">
-                    <div class="demo-content">
-                        <form class="ui-form">
-                            <div class="ui-form-group">
-                                <label>文本框的演示</label>
-                                <input type="text" class="input big">
-                            </div>
-                            <div class="ui-form-group">
-                                <label>下拉的演示</label>
-                                <select class="select big">
-                                    <option>下拉的演示</option>
-                                    <option>下拉的演示</option>
-                                    <option>下拉的演示</option>
-                                </select>
-                            </div>
-                            <div class="ui-form-group">
-                                <label>checkbox的演示</label>
-                                <div class="ui-checkbox-group">
-                                    <label class="ui-checkbox clearfix">
-                                        <input name="" type="checkbox">
-                                        <i class="ui-checkbox-icon"></i>
-                                        这里是checkbox
-                                    </label>
-                                    <label class="ui-checkbox clearfix">
-                                        <input name="" type="checkbox">
-                                        <i class="ui-checkbox-icon"></i>
-                                        这里是checkbox
-                                    </label>
-                                    <label class="ui-checkbox clearfix">
-                                        <input name="" type="checkbox">
-                                        <i class="ui-checkbox-icon"></i>
-                                        这里是checkbox
-                                    </label>
+                <div>
+                    <h2>表单</h2>
+                    <p>什么都不带的表单</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <form class="ui-form">
+                                <div class="ui-form-group">
+                                    <label>文本框的演示</label>
+                                    <input type="text" class="input big">
                                 </div>
-                            </div>
-                            <div class="ui-form-group">
-                                <label>radio的演示</label>
-                                <div class="ui-radio-group">
-                                    <label class="ui-radio clearfix">
-                                        <input name="form-radio" type="radio">
-                                        <i class="ui-radio-icon"></i>
-                                        这里是radio
-                                    </label>
-                                    <label class="ui-radio clearfix">
-                                        <input name="form-radio" type="radio">
-                                        <i class="ui-radio-icon"></i>
-                                        这里是radio
-                                    </label>
-                                    <label class="ui-radio clearfix">
-                                        <input  name="form-radio" type="radio">
-                                        <i class="ui-radio-icon"></i>
-                                        这里是radio
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="ui-form-group">
-                                <label>需要验证必填的项目</label>
-                                <div class="ui-form-required">
+                                <div class="ui-form-group">
+                                    <label>下拉的演示</label>
                                     <select class="select big">
                                         <option>下拉的演示</option>
                                         <option>下拉的演示</option>
                                         <option>下拉的演示</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="ui-form-group">
-                                <label>需要验证必填的radio</label>
-                                <div class="ui-form-required">
+                                <div class="ui-form-group">
+                                    <label>checkbox的演示</label>
+                                    <div class="ui-checkbox-group">
+                                        <label class="ui-checkbox clearfix">
+                                            <input name="" type="checkbox">
+                                            <i class="ui-checkbox-icon"></i>
+                                            这里是checkbox
+                                        </label>
+                                        <label class="ui-checkbox clearfix">
+                                            <input name="" type="checkbox">
+                                            <i class="ui-checkbox-icon"></i>
+                                            这里是checkbox
+                                        </label>
+                                        <label class="ui-checkbox clearfix">
+                                            <input name="" type="checkbox">
+                                            <i class="ui-checkbox-icon"></i>
+                                            这里是checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>radio的演示</label>
                                     <div class="ui-radio-group">
                                         <label class="ui-radio clearfix">
                                             <input name="form-radio" type="radio">
@@ -597,26 +558,343 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ui-form-group">
-                                <label>文本域的演示</label>
-                                <div class="ui-form-required">
-                                    <textarea class="textarea"></textarea>
+                                <div class="ui-form-group">
+                                    <label>需要验证必填的项目</label>
+                                    <div class="ui-form-required">
+                                        <select class="select big">
+                                            <option>下拉的演示</option>
+                                            <option>下拉的演示</option>
+                                            <option>下拉的演示</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="ui-form-group">
-                                <label>超大的文本域的演示</label>
-                                <div class="ui-form-required">
-                                    <textarea class="textarea big"></textarea>
+                                <div class="ui-form-group">
+                                    <label>需要验证必填的radio</label>
+                                    <div class="ui-form-required">
+                                        <div class="ui-radio-group">
+                                            <label class="ui-radio clearfix">
+                                                <input name="form-radio" type="radio">
+                                                <i class="ui-radio-icon"></i>
+                                                这里是radio
+                                            </label>
+                                            <label class="ui-radio clearfix">
+                                                <input name="form-radio" type="radio">
+                                                <i class="ui-radio-icon"></i>
+                                                这里是radio
+                                            </label>
+                                            <label class="ui-radio clearfix">
+                                                <input  name="form-radio" type="radio">
+                                                <i class="ui-radio-icon"></i>
+                                                这里是radio
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="ui-form-group">
+                                    <label>文本域的演示</label>
+                                    <div class="ui-form-required">
+                                        <textarea class="textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>超大的文本域的演示</label>
+                                    <div class="ui-form-required">
+                                        <textarea class="textarea big"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="demo-code">
+                                <pre class="brush:html">
+                                    <form class="ui-form">
+                                        <div class="ui-form-group">
+                                            <label>文本框的演示</label>
+                                            <input type="text" class="input big">
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>下拉的演示</label>
+                                            <select class="select big">
+                                                <option>下拉的演示</option>
+                                                <option>下拉的演示</option>
+                                                <option>下拉的演示</option>
+                                            </select>
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>checkbox的演示</label>
+                                            <div class="ui-checkbox-group">
+                                                <label class="ui-checkbox clearfix">
+                                                    <input name="" type="checkbox">
+                                                    <i class="ui-checkbox-icon"></i>
+                                                    这里是checkbox
+                                                </label>
+                                                <label class="ui-checkbox clearfix">
+                                                    <input name="" type="checkbox">
+                                                    <i class="ui-checkbox-icon"></i>
+                                                    这里是checkbox
+                                                </label>
+                                                <label class="ui-checkbox clearfix">
+                                                    <input name="" type="checkbox">
+                                                    <i class="ui-checkbox-icon"></i>
+                                                    这里是checkbox
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>radio的演示</label>
+                                            <div class="ui-radio-group">
+                                                <label class="ui-radio clearfix">
+                                                    <input name="form-radio" type="radio">
+                                                    <i class="ui-radio-icon"></i>
+                                                    这里是radio
+                                                </label>
+                                                <label class="ui-radio clearfix">
+                                                    <input name="form-radio" type="radio">
+                                                    <i class="ui-radio-icon"></i>
+                                                    这里是radio
+                                                </label>
+                                                <label class="ui-radio clearfix">
+                                                    <input  name="form-radio" type="radio">
+                                                    <i class="ui-radio-icon"></i>
+                                                    这里是radio
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>需要验证必填的项目</label>
+                                            <div class="ui-form-required">
+                                                <select class="select big">
+                                                    <option>下拉的演示</option>
+                                                    <option>下拉的演示</option>
+                                                    <option>下拉的演示</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>需要验证必填的radio</label>
+                                            <div class="ui-form-required">
+                                                <div class="ui-radio-group">
+                                                    <label class="ui-radio clearfix">
+                                                        <input name="form-radio" type="radio">
+                                                        <i class="ui-radio-icon"></i>
+                                                        这里是radio
+                                                    </label>
+                                                    <label class="ui-radio clearfix">
+                                                        <input name="form-radio" type="radio">
+                                                        <i class="ui-radio-icon"></i>
+                                                        这里是radio
+                                                    </label>
+                                                    <label class="ui-radio clearfix">
+                                                        <input  name="form-radio" type="radio">
+                                                        <i class="ui-radio-icon"></i>
+                                                        这里是radio
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>文本域的演示</label>
+                                            <div class="ui-form-required">
+                                                <textarea class="textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="ui-form-group">
+                                            <label>超大的文本域的演示</label>
+                                            <div class="ui-form-required">
+                                                <textarea class="textarea big"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </pre>
+                        </div>
                     </div>
-                    <div class="demo-code">
-                            <pre class="brush:html">
+                </div>
 
-                            </pre>
+                <!--表单验证-->
+                <!--<div>
+                    <h2>表单验证</h2>
+                    <p>规则的表单验证</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <form class="ui-form">
+                                <div class="ui-form-group">
+                                    <label>必填项验证</label>
+                                    <input type="text" class="input big">
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>下拉的演示</label>
+                                    <select class="select big">
+                                        <option>下拉的演示</option>
+                                        <option>下拉的演示</option>
+                                        <option>下拉的演示</option>
+                                    </select>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>checkbox的演示</label>
+                                    <div class="ui-checkbox-group">
+                                        <label class="ui-checkbox clearfix">
+                                            <input name="" type="checkbox">
+                                            <i class="ui-checkbox-icon"></i>
+                                            这里是checkbox
+                                        </label>
+                                        <label class="ui-checkbox clearfix">
+                                            <input name="" type="checkbox">
+                                            <i class="ui-checkbox-icon"></i>
+                                            这里是checkbox
+                                        </label>
+                                        <label class="ui-checkbox clearfix">
+                                            <input name="" type="checkbox">
+                                            <i class="ui-checkbox-icon"></i>
+                                            这里是checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>radio的演示</label>
+                                    <div class="ui-radio-group">
+                                        <label class="ui-radio clearfix">
+                                            <input name="form-radio" type="radio">
+                                            <i class="ui-radio-icon"></i>
+                                            这里是radio
+                                        </label>
+                                        <label class="ui-radio clearfix">
+                                            <input name="form-radio" type="radio">
+                                            <i class="ui-radio-icon"></i>
+                                            这里是radio
+                                        </label>
+                                        <label class="ui-radio clearfix">
+                                            <input  name="form-radio" type="radio">
+                                            <i class="ui-radio-icon"></i>
+                                            这里是radio
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>需要验证必填的项目</label>
+                                    <div class="ui-form-required">
+                                        <select class="select big">
+                                            <option>下拉的演示</option>
+                                            <option>下拉的演示</option>
+                                            <option>下拉的演示</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>需要验证必填的radio</label>
+                                    <div class="ui-form-required">
+                                        <div class="ui-radio-group">
+                                            <label class="ui-radio clearfix">
+                                                <input name="form-radio" type="radio">
+                                                <i class="ui-radio-icon"></i>
+                                                这里是radio
+                                            </label>
+                                            <label class="ui-radio clearfix">
+                                                <input name="form-radio" type="radio">
+                                                <i class="ui-radio-icon"></i>
+                                                这里是radio
+                                            </label>
+                                            <label class="ui-radio clearfix">
+                                                <input  name="form-radio" type="radio">
+                                                <i class="ui-radio-icon"></i>
+                                                这里是radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>文本域的演示</label>
+                                    <div class="ui-form-required">
+                                        <textarea class="textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="ui-form-group">
+                                    <label>超大的文本域的演示</label>
+                                    <div class="ui-form-required">
+                                        <textarea class="textarea big"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="demo-code">
+                                <pre class="brush:html">
+                                </pre>
+                        </div>
                     </div>
+                </div>-->
+
+                <!--弹出框-->
+                <div>
+                    <h2>弹出框</h2>
+                    <p>弹出框主要用的是现成的js插件artdialog，<a class="color-gray" href="http://aui.github.io/artDialog/doc/index.html" target="_blank">查看api请点击</a></p>
+                    <p>重写alert，在使用过程中可能会使用alert弹出一个想要别人点击确认的弹出框。</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <button type="button" onclick="alert('123')">点击打开alert</button>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:js">
+                                alert(str,function)
+                            </pre>
+                        </div>
+                        <p>alert方法可以带两个参数，第一个参数是需要显示的消息，第二个参数是点击确定的后的回调函数。</p>
+                    </div>
+                    <p>重写confirm，重写的window下的confirm方法</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <button type="button" onclick="confirm('123')">点击打开confirm</button>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:js">
+                                confirm(str,function,function)
+                            </pre>
+                        </div>
+                        <p>confirm方法可以带三个参数，第一个参数是需要显示的消息，第二个参数是点击确定的后的回调函数，第三个参数是点击取消后的回调。</p>
+                    </div>
+                    <p>新增tip轻度提示方法</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <button type="button" onclick="tip('123')">点击打开tip</button>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:js">
+                                tip(str)
+                            </pre>
+                        </div>
+                        <p>tip只有一个参数，需要显示的消息，默认两秒后自动消除。</p>
+                    </div>
+                    <p>新增loading方法开启loading，新增loadingClose方法关闭loading</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <button type="button" onclick="loading()">点击打开loading</button>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:js">
+                                loading();loadingClose();
+                            </pre>
+                        </div>
+                    </div>
+                    <p>常用弹出框</p>
+                    <p>常用弹出框一般会在body节点下自己写个div作为弹出框，div需要加上class类名ui-hide用以隐藏该div，必须要先组织好html才能执行弹出框显示方法</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <div class="ui-hide" id="dia">
+                                <p>这里是要弹出的元素</p>
+                            </div>
+                            <button type="button" id="diaBtn">点击打开弹出框</button>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:js">
+                                dialog({
+                                    id:"",//指定在dialog内部建立id，可以通过dialog.get(id)方式获取弹出框
+                                    width:100,//指定弹出框的宽度
+                                    title:"这里是标题",//指定弹出框标题
+                                    content:"",//指定需要显示的内容，可以是语原生的dom对象，也可以是html字符串
+                                    ok:function(){},//指定出现确定按钮并且为确定按钮绑定事件,如果不需要执行方法直接赋值为true即可,默认是点击后会马上关闭弹出框,可以通过return false阻止弹出框关闭
+                                    cancel:function(){},//指定出现取消按钮并且为取消按钮绑定事件,如果不需要执行方法直接赋值为true即可,可以通过return false阻止弹出框关闭
+                                }).showModal()//*指定显示出弹出框
+                            </pre>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -627,6 +905,7 @@
         </div>
     </div>
     <script src="js/lib/jquery-1.11.3.min.js"></script>
+    <script src="js/lib/artdialog/dialog.js"></script>
 
     <script src="js/lib/syntaxhighlighter/shCore.js"></script>
     <script src="js/lib/syntaxhighlighter/shBrushJScript.js"></script>
@@ -642,6 +921,7 @@
         (function(){
             var menuList=$("#menuList");
             var itemList=[];
+            var dia=document.getElementById("diaBtn");
             $("h2").each(function(){
                 var $this=$(this);
 
@@ -651,6 +931,19 @@
                 itemList.push("<li><a href='#"+guid+"'>"+this.innerHTML+"</a></li>");
             });
             menuList.append(itemList.join(""));
+
+            var d= dialog({
+                id:"",//指定在dialog内部建立id，可以通过dialog.get(id)方式获取弹出框
+                width:100,//指定弹出框的宽度
+                title:"这里是标题",//指定弹出框标题
+                content:document.getElementById("dia"),//指定需要显示的内容，可以是语原生的dom对象，也可以是html字符串
+                ok:function(){d.close()},//指定出现确定按钮并且为确定按钮绑定事件,如果不需要执行方法直接赋值为true即可,默认是点击后会马上关闭弹出框,可以通过return false阻止弹出框关闭
+                cancel:function(){}//指定出现取消按钮并且为取消按钮绑定事件,如果不需要执行方法直接赋值为true即可,可以通过return false阻止弹出框关闭
+            })//*指定显示出弹出框67
+
+            dia.addEventListener("click",function(){
+                d.showModal();
+            });
         })();
     </script>
 
