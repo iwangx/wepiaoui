@@ -19,10 +19,26 @@ p{margin: 0;}
 }
 
 .text-center{text-align: center;}
+.ui-dialog-content{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 .ui-hide{display: none}
-
+.color-red{color:#e02525}
 .right-content {  padding: 0 30px;  }
-
+.mar-right-10{margin-right: 10px;}
+.mar-right-15{margin-right: 15px;}
+.mar-right-20{margin-right: 20px;}
+.mar-left-10{margin-left: 10px;}
+.mar-left-15{margin-left: 15px;}
+.mar-left-20{margin-left: 20px;}
+.line-height-30{line-height: 30px;height: 30px;}
+.mar-bottom-10{margin-bottom: 10px;}
+.mar-bottom-15{margin-bottom: 15px;}
+.mar-bottom-20{margin-bottom: 20px;}
+.max-width-300{max-width: 300px;}
+.max-width-200{max-width: 200px;}
+.max-width-100{max-width: 100px;}
 /******************************** button ********************************/
 button,
 .button {
@@ -80,6 +96,7 @@ button,
     color: #fff;
 }
 
+/******************************** button end ********************************/
 
 /******************************** input ********************************/
 textarea:focus,
@@ -97,11 +114,15 @@ input[type="text"]:focus {
     height: 30px;
 }
 
-.date-input {
+.date-input,.date-input-datetime,.date-input-date {
     background: url(../img/common/icon-date.png) no-repeat right;
-    width: 120px;
 }
+.date-input,.date-input-date { width: 120px;}
+.date-input-datetime{width: 180px}
+
 .textarea{padding: 10px;width: 360px;height: 100px; border-radius: 3px;resize: none}
+
+/******************************** input end ********************************/
 
 /******************************** select ********************************/
 .select {
@@ -109,6 +130,7 @@ input[type="text"]:focus {
     background: #fff;
 }
 
+/******************************** select end ********************************/
 
 /******************************** radio ********************************/
 .radio + .radio {
@@ -137,6 +159,8 @@ input[type="text"]:focus {
     background-position: 0 0;
 }
 
+/******************************** radio end ********************************/
+
 /******************************** table ********************************/
 .tb {
     width: 100%;
@@ -155,13 +179,14 @@ input[type="text"]:focus {
 .tb-body tr{
     color: #333;
     height: 60px;
-
 }
 .tb-body tr:nth-of-type(odd){background: #f1f1f1;}
 .tb-body tr:nth-of-type(even){background: #fff;}
-
+.tb-body-action{margin:0 10px;font-size: 12px; }
+/*.tb-body-action:link,.tb-body-action:hover,.tb-body-action:active{color: #27affa}
+.tb-body-action:visited{color: #999}*/
 .tb-body-text{overflow: hidden;margin: 0;line-height: 13px;height: 13px;text-overflow: ellipsis;}
-
+.tb-null{text-align: center;color: #e33;line-height: 50px;height: 50px;}
 /******************************** 面包屑 ********************************/
 .ui-breadcrumb {
     padding: 8px 0;
@@ -194,7 +219,11 @@ input[type="text"]:focus {
     line-height: 15px;
 }
 
+/******************************** 面包屑 end ********************************/
 
+.right-content {
+    padding: 0 30px;
+}
 
 /******************************** 查询条件选择 ********************************/
 .form-search {
@@ -202,15 +231,19 @@ input[type="text"]:focus {
     padding: 26px 24px;
     border-radius: 5px;
     border: 1px solid #24cf5f;
-    position: relative;
     font-size: 12px;
+    position: relative;
 }
-.form-tip{
+.form-search:after{
+    content:"查询条件";
     position: absolute;
     left: 24px;
     line-height: 13px;
     top: -7px;
     background: #fff;
+}
+.form-tip{
+    display:none;
 }
 .search-row {
     margin-bottom: 26px;
@@ -256,7 +289,8 @@ input[type="text"]:focus {
 .search-type{margin-top: 15px;}
 .export{padding: 42px 0 38px 26px;}
 .tb-body{text-align: center}
-.tb-body-action{margin:0 10px; }
+/******************************** 查询条件选择 end ********************************/
+
 
 /******************************** 分页 ********************************/
 .pagination{padding: 14px 0;margin:0 0 0 auto;display: block ;overflow: hidden}
@@ -269,9 +303,12 @@ input[type="text"]:focus {
 /******************************** 颜色 ********************************/
 .color-gray{color: #999}
 .color-green{color: #44cb83;}
+.color-red{color: #ee3333;}
 
 /******************************** 地区选择 ********************************/
 select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 10px;width: 170px;}
+/**由于出现特殊情况需要验证的时候外层加个class**/
+.ddl-required .ddl-province,.ddl-required .ddl-city,.ddl-required .ddl-county{float: none}
 
 /******************************** 列表上方菜单栏 ********************************/
 .ui-checkbox,.ui-radio{padding-left:20px;font-size: 14px;font-weight: 400;margin: 0;line-height: 30px;height: 30px;cursor: pointer}
@@ -315,17 +352,23 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 /***************** 链接 ****************/
 /*蓝色的链接*/
 .link-blue,
-.tb-body-action,
-.tb-body-action:visited,
-.tb-body-action:hover,
-.tb-body-action:active,
-.tb-body-action:focus{font-size: 12px;color: #27affa;outline: none}
+.link-blue:active,.tb-body-action,
+.link-blue:visited,.tb-body-action:visited,
+.link-blue:hover,.tb-body-action:hover,
+.link-blue:active,.tb-body-action:active,
+.link-blue:focus,.tb-body-action:focus{font-size: 12px;color: #27affa;outline: none}
+.tb-body-action.active{color: #999;}
 /************************验证**********************/
 .error-warning,
-.ui-form-group .error-warning{position: absolute;margin-top: 5px;font-size: 14px;color: #ff9e00}
+.ui-form-group .error-warning{position: absolute;margin: 2px 0 0 0;font-size: 14px;color: #ff9e00;font-weight: 400;line-height: 1.1;}
 .error-warning-border,.input.error-warning-border:focus{border-color: #ff9e00}
 /*********************** tab **********************/
-.ui-tab{border-bottom: 1px solid #ccc;}
-.ui-tab a{float: left;padding: 0 25px;font-size: 14px;color: #999;height: 30px;line-height: 30px;text-decoration: none}
-.ui-tab a:hover,.ui-tab a:active,.ui-tab a:visited{color: #999;}
-.ui-tab a.active{color: #fff;background: #44cb83}
+.ui-tab-head{border-bottom: 1px solid #ccc;}
+.ui-tab-head li{float: left;}
+.ui-tab-head a{display: block;padding: 0 25px;font-size: 14px;color: #999;height: 30px;line-height: 30px;text-decoration: none}
+.ui-tab-head a:hover,.ui-tab-head a:active,.ui-tab-head a:visited{color: #999;}
+.ui-tab-head li.active a{color: #fff;background: #44cb83}
+.ui-tab-body li{display: none}
+.ui-tab-body li.active{display: block;}
+/************************** 可选中的按钮组 ************************/
+

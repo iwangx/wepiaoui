@@ -304,20 +304,20 @@
                         </div>
                         <div class="demo-code">
                             <pre class="brush:html">
-                                <div class="clearfix ui-checkbox-group">
-                                    <label class="ui-checkbox">
-                                        <input type="checkbox" >
-                                        <i class="ui-checkbox-icon"></i>
+                                <div class="clearfix ui-radio-group">
+                                    <label class="ui-radio">
+                                        <input type="radio" >
+                                        <i class="ui-radio-icon"></i>
                                         这里是checkbox
                                     </label>
-                                    <label class="ui-checkbox">
-                                        <input type="checkbox" >
-                                        <i class="ui-checkbox-icon"></i>
+                                    <label class="ui-radio">
+                                        <input type="radio" >
+                                        <i class="ui-radio-icon"></i>
                                         这里是checkbox
                                     </label>
-                                    <label class="ui-checkbox">
-                                        <input type="checkbox" >
-                                        <i class="ui-checkbox-icon"></i>
+                                    <label class="ui-radio">
+                                        <input type="radio" >
+                                        <i class="ui-radio-icon"></i>
                                         这里是checkbox
                                     </label>
                                 </div>
@@ -431,19 +431,36 @@
                     <div class="demo">
                         <div class="demo-content">
                             <div class="ui-tab clearfix">
-                                <a class="active" href="">二维码取票</a>
-                                <a href="">手机号码取票</a>
-                                <a href="">重新打票</a>
+                                <ul class="ui-tab-head clearfix">
+                                    <li class="active"><a href="javascript:;">标签1</a></li>
+                                    <li><a href="javascript:;">标签2</a></li>
+                                    <li><a href="javascript:;">标签3</a></li>
+                                </ul>
+                                <ul class="ui-tab-body clearfix">
+                                    <li class="active"><a href="javascript:;">标签1</a></li>
+                                    <li><a href="javascript:;">标签2</a></li>
+                                    <li><a href="javascript:;">标签3</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="demo-code">
                             <pre class="brush:html">
                                 <div class="ui-tab clearfix">
-                                    <a class="active" href="">二维码取票</a>
-                                    <a href="">手机号码取票</a>
-                                    <a href="">重新打票</a>
+                                    <!--tab头部-->
+                                    <ul class="ui-tab-head clearfix">
+                                        <li class="active"><a href="javascript:;">标签1</a></li>
+                                        <li><a href="javascript:;">标签2</a></li>
+                                        <li><a href="javascript:;">标签3</a></li>
+                                    </ul>
+                                    <!--tab装内容的地方-->
+                                    <ul class="ui-tab-body clearfix">
+                                        <li class="active"><a href="javascript:;">标签1</a></li>
+                                        <li><a href="javascript:;">标签2</a></li>
+                                        <li><a href="javascript:;">标签3</a></li>
+                                    </ul>
                                 </div>
                             </pre>
+                            <p>注意ui-tab-head和ui-tab-body的列表顺序</p>
                         </div>
                     </div>
                 </div>

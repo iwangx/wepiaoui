@@ -1,11 +1,16 @@
 /**
- * Created by wangxing on 2015/9/11.
+ * Created by wangxing on 2015/9/7.
+ * commonjs 这里面包含了一些公用的功能
  */
 (function(fn) {
     typeof define === "function" ? define("common", fn) : fn()
 })(function(require, exports, module){
     /**************** 时间选择 ******************/
     require("laydate");
+    var dom=$(document);
+    dom.on("click",".tb-body-action",function(){
+        $(this).addClass("active");
+    })
     var start = {
         elem: '#start',
         format: 'YYYY-MM-DD',
@@ -25,13 +30,13 @@
     };
 
     //class名为date-input-date的input框在点击的时候都会触发文本框
-    $(".date-input-date").on("click",function(){
+    dom.on("click",".date-input-date",function(){
         laydate({
             format: 'YYYY-MM-DD',
             istoday: false
         })
     });
-    $(".date-input-datetime").on("click",function(){
+    dom.on("click",".date-input-datetime",function(){
         laydate({
             format: 'YYYY-MM-DD hh:mm:ss',
             istoday: false,
@@ -45,7 +50,6 @@
     $("#end").on("click",function(){
         laydate(end);
     });
-    /**************** 时间选择结束 ******************/
     /**************** 重写弹出框 ******************/
     window.confirm=function(msg,okCallBack,cancelCallBack){
         dialog({
@@ -96,7 +100,7 @@
         window.loadingEle = dialog({
             cancelDisplay:false,
             padding:"10px 20px"
-        }).show();
+        }).showModal();
     }
 
     window.loadingClose=function(){
@@ -104,6 +108,8 @@
             window.loadingEle.close().remove();
         }
     };
+
+    /**************** 重写弹出框 ******************/
     $.fn.imageUpload=function(){
 
         function getExt(extList,type){
@@ -151,4 +157,24 @@
         });
     };
     $(".ui-image-upload").imageUpload();
+
+    /************************ tab切换 *********************/
+    $.fn.tab=function(){
+
+        this.each(function(){
+            var $this=$(this);
+            var tabHeadList=$this.find(".ui-tab-head").find("li");
+            var tabBodyList=$this.find(".ui-tab-body").find("li");
+            tabHeadList.on("click",function(){
+                var index =$(this).index();
+                tabHeadList.removeClass("active");
+                $(this).addClass("active");
+                tabBodyList.removeClass("active");
+                tabBodyList.eq(index).addClass("active");
+                index =null;
+            });
+        });
+    };
+
+    $(".ui-tab").tab();
 });
