@@ -31,23 +31,33 @@
 
     //class名为date-input-date的input框在点击的时候都会触发文本框
     dom.on("click",".date-input-date",function(){
-        laydate({
-            format: 'YYYY-MM-DD',
-            istoday: false
-        })
+        if(this.id!="start" || this.id!="end"){
+            laydate({
+                format: 'YYYY-MM-DD',
+                istoday: false
+            })
+        }
     });
     dom.on("click",".date-input-datetime",function(){
-        laydate({
-            format: 'YYYY-MM-DD hh:mm:ss',
-            istoday: false,
-            istime: true
-        })
+        if(this.id!="start" || this.id!="end"){
+            laydate({
+                format: 'YYYY-MM-DD hh:mm:ss',
+                istoday: false,
+                istime: true
+            })
+        }
     });
 
     $("#start").on("click",function(){
+        if($(this).hasClass("date-input-datetime")){
+            start.format="YYYY-MM-DD hh:mm:ss";
+        }
         laydate(start);
     });
     $("#end").on("click",function(){
+        if($(this).hasClass("date-input-datetime")){
+            end.format="YYYY-MM-DD hh:mm:ss";
+        }
         laydate(end);
     });
     /**************** 重写弹出框 ******************/
