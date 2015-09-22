@@ -22,7 +22,26 @@
                 <h1>基本样式</h1>
                 <!--按钮样式-->
                 <div>
-                    <a class="anchor"></a>
+                    <h2>文字颜色</h2>
+                    <p>几种常见的颜色</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <div class="color-gray">这里是灰色的字</div>
+                            <div class="color-green">这里是绿色的字</div>
+                            <div class="color-red">这里是红色的字</div>
+                            <div class="color-black">这里是黑色的字</div>
+                            <div class="color-blue">这里是蓝色的字</div>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:html">
+                                <p class="color-gray">这里是灰色的字</p>
+                                <p class="color-green">这里是绿色的字</p>
+                                <p class="color-red">这里是红色的字</p>
+                                <p class="color-black">这里是黑色的字</p>
+                                <p class="color-blue">这里是蓝色的字</p>
+                            </pre>
+                        </div>
+                    </div>
                     <h2>按钮</h2>
                     <p>绿色实体按钮</p>
                     <div class="demo">
@@ -43,6 +62,28 @@
                         <div class="demo-code">
                         <pre class="brush:html">
                                <button type="button" class="button button-green-hollow">绿色按钮</button>
+                        </pre>
+                        </div>
+                    </div>
+                    <p>灰色的按钮</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <button type="button" class="button button-gray">灰色按钮</button>
+                        </div>
+                        <div class="demo-code">
+                        <pre class="brush:html">
+                               <button type="button" class="button button-gray">灰色按钮</button>
+                        </pre>
+                        </div>
+                    </div>
+                    <p>被禁用的按钮</p>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <button type="button" disabled="disabled" class="button button-green">被禁用的按钮</button>
+                        </div>
+                        <div class="demo-code">
+                        <pre class="brush:html">
+                               <button type="button" disabled="disabled" class="button button-green">被禁用的按钮</button>
                         </pre>
                         </div>
                     </div>
@@ -423,10 +464,50 @@
                         </div>
                     </div>
                 </div>
-
+                <!--查询条件-->
+                <div>
+                    <h2>查询条件</h2>
+                    <div class="demo">
+                        <div class="demo-content">
+                            <form class="form-search">
+                                <div class="search-row clearfix">
+                                    <span class="fl">条件1</span>
+                                    <input type="text" class="input fl mar-right-10" />
+                                    <span class="fl">条件2</span>
+                                    <input type="text" class="input fl mar-right-10" />
+                                </div>
+                                <div class="search-row clearfix">
+                                    <span class="fl">条件3</span>
+                                    <input type="text" class="input fl mar-right-10" />
+                                    <span class="fl">条件4</span>
+                                    <input type="text" class="input fl mar-right-10" />
+                                </div>
+                                <button class="button button-green">查询</button>
+                            </form>
+                        </div>
+                        <div class="demo-code">
+                            <pre class="brush:html">
+                                <form class="form-search">
+                                    <div class="search-row clearfix">
+                                        <span class="fl">条件1</span>
+                                        <input type="text" class="input fl mar-right-10" />
+                                        <span class="fl">条件2</span>
+                                        <input type="text" class="input fl mar-right-10" />
+                                    </div>
+                                    <div class="search-row clearfix">
+                                        <span class="fl">条件3</span>
+                                        <input type="text" class="input fl mar-right-10" />
+                                        <span class="fl">条件4</span>
+                                        <input type="text" class="input fl mar-right-10" />
+                                    </div>
+                                    <button class="button button-green">查询</button>
+                                </form>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
                 <!--tab标签-->
                 <div>
-                    <a class="anchor"></a>
                     <h2>tab标签</h2>
                     <div class="demo">
                         <div class="demo-content">
@@ -905,11 +986,15 @@
                                     </form>
                                 </pre>
                             <pre class="brush:js">
+                                //引入验证
+                                var validatePlugin = require('libs/validate/validatePlugin').ValidatePlugin;
                                 //自定义验证方法
                                 $.validator.addMethod("txt_define", function(value, element, params) {
                                     return   (new RegExp("123")).test(value);
                                 }, $.validator.format("请输入123才能验证通过"));
-                                new ValidatePlugin('#form',{
+                                //初始化验证
+                                var validate =new ValidatePlugin('#form',{
+                                    //验证规则
                                     rules:{
                                         "txt_name":{//对应name="txt_name"的元素
                                             required: true
@@ -928,6 +1013,7 @@
                                         }
                                     }
                                 });
+                                validate.form()//验证表单，返回值为是否验证通过
                             </pre>
                         </div>
                     </div>

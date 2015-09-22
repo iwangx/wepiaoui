@@ -17,15 +17,18 @@ p{margin: 0;}
 .fr {
     float: right
 }
-
+button:focus,a:focus{outline: none;}
+.center-content{width: 960px;  margin: 0 auto;}
 .text-center{text-align: center;}
 .ui-dialog-content{
     overflow-x: hidden;
     overflow-y: auto;
 }
 .ui-hide{display: none}
+.ui-hidden{visibility: hidden}
 .color-red{color:#e02525}
 .right-content {  padding: 0 30px;  }
+.mar-auto{margin: 0 auto}
 .mar-right-10{margin-right: 10px;}
 .mar-right-15{margin-right: 15px;}
 .mar-right-20{margin-right: 20px;}
@@ -47,36 +50,44 @@ button,
     border: 0;
     padding: 0
 }
+button[disabled="disabled"],
+.button[disabled="disabled"]
+{background: #ccc;color: #fff;}
 
+
+.button.big{height: 50px;line-height: 50px;}
+a.button{width: 100px;cursor: pointer}
 button,
 .button:focus,
 .button:active {
     outline: none
 }
 
-/*实体绿色按钮*/
-.button-green {
+
+.button-green,.button-gray {
     line-height: 30px;
-    background: #24cf5f;
     color: #fff;
 }
+.button-green{background: #24cf5f;}
+.button-gray{background: #999}
+.button-green:hover,
+.button-green:active{color: #fff;text-decoration: none}
 
-/*空心绿色按钮*/
-.button-green-hollow {
+.button-green-hollow,.button-gray-hollow{
     line-height: 28px;
     background: #fff;
+}
+.button-green-hollow {
     border: 1px solid #24cf5f;
     color: #24cf5f
 }
-/*空心灰色按钮*/
 .button-gray-hollow{
-    line-height: 28px;
-    background: #fff;
     border: 1px solid #999;
     color: #999
 }
 .button-gray-hollow,
 .button-green-hollow,
+.button-gray,
 .button-green{
     height: 30px;
     min-width: 100px;
@@ -95,8 +106,7 @@ button,
     background: #999;
     color: #fff;
 }
-
-/******************************** button end ********************************/
+.button:disabled{background: #999;cursor: no-drop}
 
 /******************************** input ********************************/
 textarea:focus,
@@ -120,18 +130,13 @@ input[type="text"]:focus {
 .date-input,.date-input-date { width: 120px;}
 .date-input-datetime{width: 180px}
 
-.textarea{padding: 10px;width: 360px;height: 100px; border-radius: 3px;resize: none}
-
-/******************************** input end ********************************/
+textarea,.textarea{padding: 10px;width: 360px;height: 100px; border-radius: 3px;resize: none}
 
 /******************************** select ********************************/
 .select {
     padding: 0;
     background: #fff;
 }
-
-/******************************** select end ********************************/
-
 /******************************** radio ********************************/
 .radio + .radio {
     margin: 0 20px 0 0;
@@ -158,8 +163,6 @@ input[type="text"]:focus {
 .radio-input:checked + .radio-icon {
     background-position: 0 0;
 }
-
-/******************************** radio end ********************************/
 
 /******************************** table ********************************/
 .tb {
@@ -233,6 +236,7 @@ input[type="text"]:focus {
     border: 1px solid #24cf5f;
     font-size: 12px;
     position: relative;
+    margin-top: 5px;
 }
 .form-search:after{
     content:"查询条件";
@@ -303,8 +307,9 @@ input[type="text"]:focus {
 /******************************** 颜色 ********************************/
 .color-gray{color: #999}
 .color-green{color: #44cb83;}
-.color-red{color: #ee3333;}
-
+.color-red{color: #e33;}
+.color-black{color:#333}
+.color-blue{color:#27affa}
 /******************************** 地区选择 ********************************/
 select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 10px;width: 170px;}
 /**由于出现特殊情况需要验证的时候外层加个class**/
@@ -371,4 +376,15 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 .ui-tab-body li{display: none}
 .ui-tab-body li.active{display: block;}
 /************************** 可选中的按钮组 ************************/
+.ui-big-radio{display: block;text-align: center;font-weight: 400;cursor: pointer;margin: 0}
+.ui-big-radio input{display: none;}
+.ui-big-radio-inner{display: block;height: 40px;line-height: 40px;border-radius: 3px;border:1px solid #44cb83;background: #fff;color: #999;font-size: 14px;width: 200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding: 0 20px;}
+.ui-big-radio input:checked+.ui-big-radio-inner,.ui-big-radio-inner:hover,.ui-big-radio-inner:active{background: #c7f0da;color: #44cb83;}
+/*********************************没有内容的头部以及宽度为1000的头部***********************************/
+.ui-head{
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #24cf5f;
+    box-shadow:  0 0 4px rgba(0,0,0,.5);
+}
 
