@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+	<meta name="author" content="wangxing">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="format-detection" content="telephone=no">
+	<title>选坐</title>
+	<link rel="stylesheet" href="/css/reset.css"/>
+	<style type="text/css">
+		.wrap{
+			overflow: hidden;
+			position: relative;
+		}
+		.trans{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<div id="trans" class="trans">
+			<canvas id="canvas"></canvas>
+		</div>
+	</div>
+
+
+<script src="js/lib/sea.js"></script>
+<script src="js/lib/jquery-1.11.3.min.js"></script>
+<script src="js/test-config.js"></script>
+</body>
+</html>
