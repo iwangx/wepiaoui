@@ -9,7 +9,7 @@
     var hammer=require("lib/hammer/hammer.min");
     var wrap=$("#wrap");
     var trans=$("#trans");
-    var count=1000;
+    var count=3000;
     var list=[];
     var row=0;
     var col=0;
@@ -58,8 +58,8 @@
     }
 
     var hammertime = new Hammer(canvas, {});
-    hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    hammertime.on("panleft panright panup pandown tap press", function(ev) {
+    //hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.on("panleft panright panup pandown press", function(ev) {
         //myElement.textContent = ev.type +" gesture detected.";
     });
     canvas.height=maxRow*44;
