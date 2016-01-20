@@ -776,8 +776,6 @@ textarea.error-warning-border:focus{border-color: #ff9e00}
     display:-webkit-flex;
 }
 .content-left{
-    background: #f1f1f1;
-    width: 180px;
 }
 
 /*底部样式*/
