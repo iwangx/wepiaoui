@@ -244,27 +244,40 @@ textarea, .textarea{padding: 10px;width: 360px;height: 100px; border-radius: 3px
 }
 
 .tb-head td,
-.tb-head th
+.tb-head th,
+.tb thead td,
+.tb thead th
 {
     height: 30px;
     color: #999;
     border-bottom: 2px solid #24cf5f;
 }
 .tb-head th:first-child,
-.tb-head td:first-child{
+.tb-head td:first-child,
+.tb thead td:first-child,
+.tb thead th:first-child{
     padding-left: 5px;
 }
 
+.tb tbody tr,
 .tb-body tr{
     color: #333;
     height: 60px;
 }
+.tb tbody td:first-child,
 .tb-body td:first-child{
     padding-left: 5px;
 }
-.tb-body tr:nth-of-type(odd){background: #f1f1f1;}
-.tb-body tr:nth-of-type(even){background: #fff;}
-.tb-body .tb-body-action{display: inline-block}
+.tb tbody tr:nth-of-type(odd),
+.tb-body tr:nth-of-type(odd)
+{background: #f1f1f1;}
+
+.tb tbody tr:nth-of-type(even),
+.tb-body tr:nth-of-type(even)
+{background: #fff;}
+.tb tbody .tb-body-action,
+.tb-body .tb-body-action
+{display: inline-block}
 .tb-body-action{margin-right: 10px;font-size: 12px; }
 /*.tb-body-action:link,.tb-body-action:hover,.tb-body-action:active{color: #27affa}
 .tb-body-action:visited{color: #999}*/
@@ -464,6 +477,39 @@ select.ddl-province,select.ddl-city,select.ddl-county{float: left;margin-right: 
 .ui-form-group>label{display: inline-block;margin-bottom: 6px;color: #44cb83;font-size: 12px;line-height: 12px;}
 .ui-form-required{position: relative}
 .ui-form-required:before{content: "*";position: absolute;color: #e00000;height: 4px;line-height: 4px;top: 50%;margin-top: -2px;left: -20px;display: block}
+/****************新表单中的行**************/
+.ui-form .ui-row:last-child{margin: 0}
+
+.ui-row{
+    margin-bottom: 20px;
+}
+.ui-row:before,.ui-row:after
+{
+    display: table;
+    content: ""
+}
+.ui-row:after
+{
+    clear: both
+}
+.ui-row-label{
+    display: block;
+    width: 100px;
+    text-align: left;
+    line-height: 1.1;
+    float: left;
+    margin: 8px 0 0 0;
+}
+.ui-row-control{
+    margin-left: 100px;
+}
+.ui-row-label.required:after{
+    content: "(选填)";
+    display: block;
+    line-height: 1.1;
+    font-size: 12px;
+    color: #999;
+}
 /**********上传图片***********/
 .ui-image-upload{position: relative;min-height: 60px;min-width: 60px;background: url(../img/common/icon-add.png) center no-repeat}
 .ui-image-upload-img{display: block;height: 100%;width: 100%;}
@@ -776,6 +822,8 @@ textarea.error-warning-border:focus{border-color: #ff9e00}
     display:-webkit-flex;
 }
 .content-left{
+    background: #f1f1f1;
+    width: 180px;
 }
 
 /*底部样式*/
